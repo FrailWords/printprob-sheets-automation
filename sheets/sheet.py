@@ -3,7 +3,7 @@ import numpy as np
 from google.oauth2 import service_account
 
 
-def print_sheet(estc_no, uuid):
+def update_uuid_in_sheet_for_estc_number(estc_no, uuid):
     SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
     SERVICE_ACCOUNT_FILE = 'client_secret.json'
 
@@ -18,18 +18,7 @@ def print_sheet(estc_no, uuid):
     index = 0
     for row in wks:
         index += 1
-        print(row[1])
         if row[1] == estc_no:
-            print('found it at index', index)
+            print('found given ESTC number at index', index)
             wks.update_value("S{}".format(index), uuid)
             break
-
-    # Update a cell with value (just to let him know values is updated ;) )
-    # wks.update_value('A1', "Hey yank this numpy array")
-    # my_nparray = np.random.randint(10, size=(3, 4))
-
-    # update the sheet with array
-    # wks.update_values('A2', my_nparray.tolist())
-
-    # share the sheet with your friend
-    # sh.share("myFriend@gmail.com")
