@@ -3,6 +3,14 @@
 * Verify `Poetry` installation by running `poetry --version`
 * Python 3.8 or above
 
+## Update dependencies
+
+Run:
+```bash
+poetry update
+```
+to install and update the virtual environment.
+
 ## Before you run, download the client secret JSON
 
 Download the `client_secret.json` file into the project root directory from Bridges2 node at the following location: 
