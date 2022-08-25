@@ -5,3 +5,6 @@ Download the `client_secret.json` file into the project root directory from Brid
 ```bash
 /data/sheets-automation/client_credentials.json
 ```
+
+## Running the command
+
